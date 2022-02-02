@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Unica One', cursive;
+    overflow: hidden;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(black, rgba(10, 0, 30));
+    z-index: -1;
+}
+
+.title {
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border-radius: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 27%;
+    height: 100px;
+    width: 60%;
+    text-align: center;
+    font-size: 65px;
+    letter-spacing: 7px;
+    font-weight: 100;
+    /* display: none; */
+    z-index: 5;
+}
+span {
+    color: rgb(189, 255, 6);
+}
+.start {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    background-color: black;
+    height: 50px;
+    width: 400px;
+    border-radius: 40px;
+    ;
+    font-size: 40px;
+    text-align: center;
+    /* display: none; */
+    z-index: 5;
+}
+
+.battleship {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 60px;
+    height: 85px;
+}
+
+.invader-container {
+    position: absolute;
+    transform: translate(-50%);
+    top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 600px;
+    height: 250px;
+    z-index: 4;
+}
+
+.invaders {
+    height: 45px;
+    margin: 7px 40px 10px 7px;
+    
+}
+.one {
+    filter:hue-rotate(210deg);
+}
+.two {
+    filter:hue-rotate(300deg);
+}
+.three {
+    filter:hue-rotate(140deg);
+}
+.four {
+    filter:hue-rotate(90deg);
+}
+.five {
+    filter:hue-rotate(40deg);
+}
+
+
+.laser {
+   position: absolute;
+   left: 50%;
+    background: linear-gradient(rgb(255, 212, 18)10%, rgb(71, 255, 15)40%,rgba(10,10,10, 0));
+    border-radius: 50% 50% 0 0;
+    animation-name: shoot 0s infinite;
+    z-index: 2;
+}
+
+/* @keyframes shoot {
+    100% {
+        transform: translateY(-700px);
+    }
+} */
+
+i {
+    position: absolute;
+    background-color: white;
+    animation: movedown linear forwards;
+    
+}
+
+@keyframes movedown {
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
